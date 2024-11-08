@@ -55,6 +55,4 @@
             </td>
         </tr>
     </table>
-    </body>
-    </html>
 @endsection
