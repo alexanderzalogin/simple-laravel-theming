@@ -13,13 +13,13 @@ class MainController extends BaseController {
     }
 
     public function saveTheme(Request $request) {
+        //skipped some validation
         setcookie("AppTheme", $request->post('theme'));
         $this->theme = $request->post('theme');
         return $this->makeView('welcome')->with(['theme' => $this->theme]);
     }
 
     public function contacts() {
-        var_dump($_COOKIE["AppTheme"]);
         return $this->makeView('contacts')->with(['theme' => $this->theme]);
     }
 }
