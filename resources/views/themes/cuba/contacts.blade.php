@@ -1,9 +1,5 @@
-<html>
-<head>
-    <link href="{{ asset('cuba/css/style.css') }}" rel="stylesheet">
-</head>
-<body>
-@include('themes.cuba.menu')
+@extends('themes.cuba.layout')
+@section('content')
 <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="
                 color: #1d1d1d;
                 font-family: 'Roboto', sans-serif, Arial, Helvetica;
@@ -42,10 +38,9 @@
                             margin-top: 20px;
                             margin-bottom: 0;
                             ">
-                © 2009 – {{ date('Y') }} {{ config('app.name') }}.
+                © {{ date('Y') }} {{ config('app.name') }}.
             </p>
         </td>
     </tr>
 </table>
-</body>
-</html>
+@endsection
